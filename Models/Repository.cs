@@ -9,7 +9,16 @@
 
         static Repository()
         {
+            _categories.Add(new Category() { CategoryId=1,Name="Telefon"});
+            _categories.Add(new Category() { CategoryId = 2, Name = "Bilgisayar" });
 
+
+            _products.Add(new Product() { ProductId=1,Name="Iphone 14",Price=50000,Image="1.jpg",IsActive=true,CategoryId=1 });
+            _products.Add(new Product() { ProductId = 2, Name = "Iphone 13", Price = 40000, Image = "2.jpg", IsActive = true, CategoryId = 1 });
+            _products.Add(new Product() { ProductId = 3, Name = "Samsung Galaxy S23", Price = 35000, Image = "3.jpg", IsActive = true, CategoryId = 1 });
+            _products.Add(new Product() { ProductId = 4, Name = "Redmi Note5", Price = 15000, Image = "4.jpg", IsActive = true, CategoryId = 1 });
+            _products.Add(new Product() { ProductId = 5, Name = "Macbook Pro", Price = 25000, Image = "5.jpg", IsActive = true, CategoryId = 2 });
+            _products.Add(new Product() { ProductId = 6, Name = "Macbook Air", Price = 20000, Image = "6.jpg", IsActive = true, CategoryId = 2 });
         }
 
         public static List<Product> Products

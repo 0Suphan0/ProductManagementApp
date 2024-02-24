@@ -13,7 +13,7 @@ namespace FormsApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(Repository.Products);
         }
 
         public IActionResult Privacy()
