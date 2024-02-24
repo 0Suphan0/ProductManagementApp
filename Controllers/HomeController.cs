@@ -1,7 +1,9 @@
 ﻿using FormsApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Diagnostics;
 using System.Globalization;
+using System.Linq;
 
 namespace FormsApp.Controllers
 {
@@ -12,7 +14,7 @@ namespace FormsApp.Controllers
         {
         }
 
-        public IActionResult Index(string searchString)
+        public IActionResult Index(string searchString,string category)
         {
             var products = Repository.Products;
             ViewBag.SearchString = searchString;
@@ -24,6 +26,12 @@ namespace FormsApp.Controllers
                 products = products.Where(i => i.Name.ToLowerInvariant().Contains(str3)).ToList();
             }
 
+            ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+
+            if (!string.IsNullOrEmpty(category) && category != "0") { 
+
+                products = products.Where(p => p.CategoryId == int.Parse(category)).ToList();
+            }
 
 
             return View(products);
