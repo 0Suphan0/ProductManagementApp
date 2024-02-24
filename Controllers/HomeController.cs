@@ -1,6 +1,7 @@
 ﻿using FormsApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace FormsApp.Controllers
 {
@@ -11,9 +12,21 @@ namespace FormsApp.Controllers
         {
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string searchString)
         {
-            return View(Repository.Products);
+            var products = Repository.Products;
+            ViewBag.SearchString = searchString;
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                string str3 = searchString.ToLowerInvariant(); // Kültür bağımsız dönüştürme
+
+                products = products.Where(i => i.Name.ToLowerInvariant().Contains(str3)).ToList();
+            }
+
+
+
+            return View(products);
         }
 
         public IActionResult Privacy()
