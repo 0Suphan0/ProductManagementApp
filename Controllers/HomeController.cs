@@ -26,15 +26,25 @@ namespace FormsApp.Controllers
                 products = products.Where(i => i.Name.ToLowerInvariant().Contains(str3)).ToList();
             }
 
-            ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+           // ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name",category);
+
+            
 
             if (!string.IsNullOrEmpty(category) && category != "0") { 
 
                 products = products.Where(p => p.CategoryId == int.Parse(category)).ToList();
             }
 
+            var model = new ProductViewModel()
+            {
+                Products = products,
+                Categories = Repository.Categories,
+                SelectedCategory = category,
+            };
 
-            return View(products);
+
+
+            return View(model);
         }
 
         public IActionResult Privacy()
