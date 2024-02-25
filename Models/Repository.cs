@@ -38,5 +38,10 @@
             }
 
         }
+
+        public static void CreateProduct(Product product)
+        {
+            _products.Add(product);
+        }
     }
 }

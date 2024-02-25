@@ -56,7 +56,8 @@ namespace FormsApp.Controllers
         [HttpPost]
         public IActionResult Create(Product model)
         {
-            return View();
+            Repository.CreateProduct(model);
+            return RedirectToAction("Index");
         }
 
 
