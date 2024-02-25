@@ -7,7 +7,7 @@ namespace FormsApp.Models
         [Display(Name = "ID")]
         public int ProductId { get; set; }
         [Display(Name = "Ürün Adı")]
-
+        [Required]
         public string Name { get; set; }=string.Empty;
         [Display(Name = "Fiyat")]
 
