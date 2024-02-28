@@ -23,7 +23,7 @@ namespace FormsApp.Controllers
             {
                 string str3 = searchString.ToLowerInvariant(); // Kültür bağımsız dönüştürme
 
-                products = products.Where(i => i.Name.ToLowerInvariant().Contains(str3)).ToList();
+                products = products.Where(i => i.Name!.ToLowerInvariant().Contains(str3)).ToList();
             }
 
            // ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name",category);
@@ -54,7 +54,7 @@ namespace FormsApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Product model)
+        public IActionResult Create(Product model, IFormFile imageFile)
         {
             if (ModelState.IsValid)
             {

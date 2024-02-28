@@ -18,10 +18,9 @@ namespace FormsApp.Models
         public decimal? Price { get; set; }
 
         [Display(Name = "Resim")]
-        [Required(ErrorMessage = "Resim alanı gereklidir.")]
 
         public string Image { get; set;} = string.Empty;
-        [Display(Name = "Satışta mı?")]
+        [Display(Name = "Aktif mı?")]
 
         public bool IsActive { get; set; }
         [Display(Name = "Kategori")]
