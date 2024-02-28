@@ -7,19 +7,25 @@ namespace FormsApp.Models
     {
         [Display(Name = "ID")]
         public int ProductId { get; set; }
-        [Display(Name = "Ürün Adı")]
-        [Required]
-        public string Name { get; set; }=string.Empty;
-        [Display(Name = "Fiyat")]
 
-        public decimal Price { get; set; }
+        [Required(ErrorMessage ="Ad alanı gereklidir.")]
+        [Display(Name = "Ürün Adı")]
+        public string? Name { get; set; }
+
+        [Display(Name = "Fiyat")]
+        [Range(0,1000000,ErrorMessage ="Aralık 0 ile 1.000.000 arasında olmalıdır.")]
+        [Required(ErrorMessage ="Fiyat alanı gereklidir.")]
+        public decimal? Price { get; set; }
+
         [Display(Name = "Resim")]
+        [Required(ErrorMessage = "Resim alanı gereklidir.")]
+
         public string Image { get; set;} = string.Empty;
         [Display(Name = "Satışta mı?")]
 
         public bool IsActive { get; set; }
         [Display(Name = "Kategori")]
-
+        [Required(ErrorMessage = "Kategori alanı gereklidir.")]
         public int CategoryId { get; set; }
 
 
