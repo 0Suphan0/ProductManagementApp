@@ -86,6 +86,24 @@ namespace FormsApp.Controllers
           
         }
 
+        public IActionResult Edit(int? id)
+        {
+
+            if(id == null)
+            {
+                return NotFound();
+            }
+            var entity = Repository.Products.FirstOrDefault(p => p.ProductId == id);
+
+            if (entity==null)
+            {
+                return NotFound();
+            }
+
+            ViewBag.Categories = new SelectList(Repository.Categories, "CategoryId", "Name");
+            return View(entity);
+        }
+
 
     }
 }
