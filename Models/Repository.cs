@@ -11,7 +11,7 @@
         {
             _categories.Add(new Category() { CategoryId=1,Name="Telefon"});
             _categories.Add(new Category() { CategoryId = 2, Name = "Bilgisayar" });
-
+            
 
             _products.Add(new Product() { ProductId=1,Name="Iphone 14",Price=50000,Image="1.jpg",IsActive=true,CategoryId=1 });
             _products.Add(new Product() { ProductId = 2, Name = "Iphone 13", Price = 40000, Image = "2.jpg", IsActive = true, CategoryId = 1 });
@@ -55,6 +55,17 @@
                 entity.CategoryId = updatedProduct.CategoryId;
                 entity.Image= updatedProduct.Image;
       
+            }
+
+        }
+
+        public static void DeleteProduct(Product deletedProduct)
+        {
+            var entity = _products.FirstOrDefault(p => p.ProductId == deletedProduct.ProductId);
+            if (entity != null)
+            {
+                Products.Remove(entity);
+
             }
 
         }

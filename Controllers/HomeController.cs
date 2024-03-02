@@ -139,6 +139,27 @@ namespace FormsApp.Controllers
 
         }
 
+        public IActionResult Delete(int? id)
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+          var entity=  Repository.Products.FirstOrDefault(P => P.ProductId == id);
+
+           if (entity == null)
+            {
+                return NotFound();
+            }
+
+           Repository.DeleteProduct(entity);
+           return RedirectToAction("Index");   
+
+
+
+        }
+
 
 
 
