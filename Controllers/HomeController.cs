@@ -146,20 +146,41 @@ namespace FormsApp.Controllers
                 return NotFound();
             }
 
-          var entity=  Repository.Products.FirstOrDefault(P => P.ProductId == id);
+           var entity=  Repository.Products.FirstOrDefault(P => P.ProductId == id);
 
            if (entity == null)
             {
                 return NotFound();
             }
 
-           Repository.DeleteProduct(entity);
-           return RedirectToAction("Index");   
+           //Repository.DeleteProduct(entity);
+           return View(entity);   
 
 
 
         }
 
+        [HttpPost]
+        public IActionResult Delete(int? id,int ProductId)
+        {
+            if (id != ProductId)
+            {
+                return NotFound();
+            }
+
+            var entity = Repository.Products.FirstOrDefault(P => P.ProductId == ProductId);
+
+            if (entity == null)
+            {
+                return NotFound();
+            }
+
+            Repository.DeleteProduct(entity);
+            return RedirectToAction("Index");
+
+
+
+        }
 
 
 
