@@ -21,24 +21,36 @@ The project is a web application developed using .NET Core MVC. This application
 
 ## Ekran Görüntüleri (Screenshots)
 
-### Ürünlerin Listelenmesi:
-<img src="ProjectSS/1.png" width="auto">
-### Arama kısmından ürünün aranması:
-<img src="ProjectSS/2.png" width="auto">
-### Kategori kısmından ürünün filtrelenmesi:
-<img src="ProjectSS/3.png" width="auto">
-### Validasyonların gösterilmesi:
-<img src="ProjectSS/4.png" width="auto">
-### Yeni ürün ekleme:
-<img src="ProjectSS/5.png" width="auto">
-### Yeni ürünün listelenmesi:
-<img src="ProjectSS/6.png" width="auto">
-### Yeni ürünün güncellenmesi (Örnek olarak fiyat bilgisi ve fotoğraf değiştirildi..)
-<img src="ProjectSS/7.png" width="auto">
-### Güncellenmiş ürünün listelenmesi
-<img src="ProjectSS/8.png" width="auto">
-### Ürün silinmek istendiğinde uyarı ekranı çıkartılması: 
-<img src="ProjectSS/9.png" width="auto">
-### Ürün silindikten sonra listelenme işlemi:
-<img src="ProjectSS/10.png" width="auto">
+# Proje Ekran Görüntüleri
+
+## Ürünlerin Listelenmesi:
+![Ürünlerin Listelenmesi](ProjectSS/1.png)
+
+## Arama kısmından ürünün aranması:
+![Arama kısmından ürünün aranması](ProjectSS/2.png)
+
+## Kategori kısmından ürünün filtrelenmesi:
+![Kategori kısmından ürünün filtrelenmesi](ProjectSS/3.png)
+
+## Validasyonların gösterilmesi:
+![Validasyonların gösterilmesi](ProjectSS/4.png)
+
+## Yeni ürün ekleme:
+![Yeni ürün ekleme](ProjectSS/5.png)
+
+## Yeni ürünün listelenmesi:
+![Yeni ürünün listelenmesi](ProjectSS/6.png)
+
+## Yeni ürünün güncellenmesi (Örnek olarak fiyat bilgisi ve fotoğraf değiştirildi..)
+![Yeni ürünün güncellenmesi](ProjectSS/7.png)
+
+## Güncellenmiş ürünün listelenmesi
+![Güncellenmiş ürünün listelenmesi](ProjectSS/8.png)
+
+## Ürün silinmek istendiğinde uyarı ekranı çıkartılması:
+![Ürün silinmek istendiğinde uyarı ekranı çıkartılması](ProjectSS/9.png)
+
+## Ürün silindikten sonra listelenme işlemi:
+![Ürün silindikten sonra listelenme işlemi](ProjectSS/10.png)
+
 
