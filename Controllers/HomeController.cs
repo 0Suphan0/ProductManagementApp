@@ -182,6 +182,18 @@ namespace FormsApp.Controllers
 
         }
 
+        [HttpPost]
+        public IActionResult EditProducts(List<Product> products)
+        {
+            foreach (var product in products)
+            {
+                Repository.EditIsActive(product);
+            }
+
+            return RedirectToAction("Index");
+
+        }
+
 
 
     }
