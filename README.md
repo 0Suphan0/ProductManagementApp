@@ -21,7 +21,7 @@ The project is a web application developed using .NET Core MVC. This application
 
 
 
-# Proje Ekran Görüntüleri (Screenshots)
+## Proje Ekran Görüntüleri (Screenshots)
 
 ## Ürünlerin Listelenmesi:
 ![Ürünlerin Listelenmesi](ProjectSS/1.png)
