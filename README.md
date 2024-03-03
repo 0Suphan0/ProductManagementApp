@@ -19,9 +19,9 @@ The project is a web application developed using .NET Core MVC. This application
 - Delete Entity
 - Batch Update
 
-## Ekran Görüntüleri (Screenshots)
 
-# Proje Ekran Görüntüleri
+
+# Proje Ekran Görüntüleri (Screenshots)
 
 ## Ürünlerin Listelenmesi:
 ![Ürünlerin Listelenmesi](ProjectSS/1.png)
