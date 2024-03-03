@@ -33,7 +33,7 @@ Yeni ürün ekleme:
 <img src="ProjectSS/5.png" width="auto">
 Yeni ürünün listelenmesi:
 <img src="ProjectSS/6.png" width="auto">
-Yeni ürünün güncellenmesi (Fiyat Bilgisinin)
+Yeni ürünün güncellenmesi (Örnek olarak fiyat bilgisi ve fotoğraf değiştirildi..)
 <img src="ProjectSS/7.png" width="auto">
 Güncellenmiş ürünün listelenmesi
 <img src="ProjectSS/8.png" width="auto">
